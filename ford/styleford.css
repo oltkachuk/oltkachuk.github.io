@@ -1,0 +1,52 @@
+header{
+    color: darkred;
+    text-align: center;
+}
+nav{
+    color: chocolate;
+    margin-left: 20px;
+}
+#tablenav{
+    background-color: lightgray;
+}
+h3,p.green{
+    color: green;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 50px;
+    margin-top: 100px;
+}
+p{
+    text-indent: 25px;
+    padding: 5px;
+    margin-left: -10px;
+    
+}
+p::first-letter{
+    font-size: 130%;
+    color: green;
+}
+h1, h2, h3{
+    margin-left: 50px;
+}
+img.avatar{
+    border-radius: 50%;
+    border-color: green;
+}
+img.avto{
+    border-radius: 5%;
+    border-color: grey
+}
+table{
+    background-color: greenyellow;
+    border: blue;
+}
+figure{
+    text-align: center;
+}   
+figcaption{
+    font-style: italic;
+}
