@@ -1,14 +1,9 @@
 header{
+    padding-top: 50px;
     color: darkred;
     text-align: center;
 }
-nav{
-    color: chocolate;
-    margin-left: 20px;
-}
-#tablenav{
-    background-color: lightgray;
-}
+
 h3,p.green{
     color: green;
 }
@@ -16,14 +11,21 @@ h3,p.green{
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin: 50px;
-    margin-top: 100px;
+    margin: 0px 10px 25px 10px;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e2e2e2+0,dbdbdb+50,d1d1d1+51,fefefe+100;Grey+Gloss+%231 */
+background: rgb(226,226,226); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+
+    
 }
+/*Забава з текстами*/
 p{
     text-indent: 25px;
     padding: 5px;
-    margin-left: -10px;
-    
+  
 }
 p::first-letter{
     font-size: 130%;
@@ -50,3 +52,80 @@ figure{
 figcaption{
     font-style: italic;
 }
+/* Navigation menu*/
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav>ul>li{
+    list-style: none;
+    border-right: 1px solid black;  
+}
+nav ul li a{
+    display: block;
+    color: gray;
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+nav>ul>li:first-child{
+    border-left: 2px solid gray;
+}
+nav>ul>li:last-child{
+    border-right: 2px solid gray;
+}
+nav>ul li a:hover{
+    color: white;
+    background-color: gray;
+    transition: all 0.3s ease;
+}
+/*Опис меню 2 рівня*/
+nav>ul>li>ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    position: absolute;
+    min-width: 100px;
+    margin: 0;
+    display: none;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
+background: #fcfff4; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */     
+}
+nav>ul>li>ul li a{
+    border: 1px solid gray;
+    padding: 5px;
+}
+/*Розгортання меню 2 рівня*/
+nav>ul>li:hover>ul{
+    display: block;
+}
+/* Закріплення меню зверху*/
+nav{
+    margin: 0px 10px 0px -10px;
+    padding-left: 10px;
+    width: 100%;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
+background: #fcfff4; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+    position: fixed;
+    top: 0em;
+}
+/*Закріплення трілки Home*/
+footer figure img{
+position: fixed;
+bottom: 10px;
+right: 10px;
+z-index: 800;
+}
+
+
+
+
