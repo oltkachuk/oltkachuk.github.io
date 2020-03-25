@@ -1,0 +1,21 @@
+div{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+#a{
+float: left;
+}
+#b{
+float: right;
+}
+#c{
+float: left;
+overflow-y: scroll;
+}
+#d{
+float: right;
+}
+#e{
+clear: both;
+}
