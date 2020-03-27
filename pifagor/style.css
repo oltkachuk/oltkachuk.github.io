@@ -1,0 +1,26 @@
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+#main {
+    display: table;
+    border-collapse: collapse;
+}
+
+.cell-main {
+    background-color: green;
+}
+.cell-umain{
+    background-color: aqua;
+}
+.cell-inmain{
+    background-color: yellow;
+}
