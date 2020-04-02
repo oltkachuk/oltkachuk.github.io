@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+    <div class="conteiner">
+        <div class="right">
+            <div class="chosevalute">
+                <h3>Дізнайтесь курс валют</h3>
+                    <select name="valute" id="val">
+                        <option value="EUR" id = "eu">Euro</option>
+                        <option value="USD" id = "usd">USD</option>
+                        <option value="PLN" id = "zloty">Poland Zloty</option>
+                    </select>    
+            </div>
+            <div class="chosedate">
+                <h3>Виберіть дату:</h3>
+                <input type="date" name="sdate" id="sdate" class="date">
+                <input type="date" name="ndate" id="ndate" class="date">
+            </div>
+            <div id = 'button'>
+                <input type="button" value="Get Result" id = "btnGetRateValute">
+            </div>
+        </div>      
+        <div class="left"> 
+                <div id = 'result'></div>
+        </div>
+    </div>
+</form>
+<script src="main.js"></script>
+</body>
+</html>
