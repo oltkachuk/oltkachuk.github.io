@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Page</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="content" ng-controller="myCtrl" class='bold'>
+            <label>
+                {{ title }}
+            </label>
+            <table>
+                <thead>
+                    <tr>
+                        <td class='bold'>
+                            Sections
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-model='selectAllViews' ng-click='clickAllViews()'> 
+                            Check all
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-disabled='!selectAllViews' ng-model='selectAllEdit' ng-click='clickAllEdits()'>
+                            Check all
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-disabled='!selectAllEdit' ng-model='selectAllRemove' ng-click='clickAllRemoves()'>
+                            Check all
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='category in listgroups'>
+                        <td>
+                            {{category.name}}
+                        </td>  
+                        <td>
+                            <input type="checkbox" ng-model='category.SelectedView' ng-click='clickView(category)'>
+                            {{category.view}}
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-disabled='!category.SelectedView' ng-model='category.SelectedEdit' ng-click='clickEdit(category)' >
+                            {{category.edit}}
+                        </td>
+                        <td>
+                            <input type="checkbox" ng-disabled='!category.SelectedEdit' ng-model='category.SelectedRemove' ng-click='clickRemove(category)' >
+                            {{category.remove}}
+                        </td>          
+                    </tr>
+                </tbody>
+            </table>
+            <form action="">
+                <button ng-click="saveResult()">Save</button>
+            </form>
+        </div>
+    </div>       
+</body>
+</html>
